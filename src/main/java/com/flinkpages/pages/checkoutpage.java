@@ -39,23 +39,7 @@ public class checkoutpage{
 	}
 
 
-
-	public ArrayList<String> getProductNames() {
-
-
-		List<WebElement> elements = elementUtil.getElements(productNamesSelected);
-
-		ArrayList<String> productNames = new ArrayList<String>();
-
-		for(int i = 0;i<elements.size();i++) {
-			if(i%2==0)
-				productNames.add(elements.get(i).getText());
-		}
-		return productNames;
-
-	}
-
-	public ArrayList<Integer> getProductValues() {
+	private ArrayList<Integer> getProductValues() {
 
 		String productNamexpath = "//tbody//td";
 		List<WebElement> elements = elementUtil.getElements(By.xpath(productNamexpath));
@@ -71,7 +55,7 @@ public class checkoutpage{
 
 	}
 
-	public int getTotalValues() {
+	private int getTotalValues() {
 		String finalValueText = elementUtil.getElement(By.id("total")).getText();
 		String[] values = finalValueText.split(" ");
 		int totalValue = Integer.parseInt(values[values.length-1]);
@@ -91,16 +75,17 @@ public class checkoutpage{
 
 	public confirmationpage makePayment() throws InterruptedException {
 
-		elementUtil.waitForElementsVisible(payForBtn,30).click();
+		elementUtil.waitForElementVisible(payForBtn,30).click();
 		elementUtil.moveToFrame(frameForPaymentPopup);
-		elementUtil.waitForElementsVisible(By.xpath("//h1"),30);
-		elementUtil.waitForElementsVisible(emailTextBox,30).sendKeys(RandomStringUtils.randomAlphabetic(10)+"@hotmail.com");
+		elementUtil.waitForElementVisible(By.xpath("//h1"),30);
+		elementUtil.waitForElementVisible(emailTextBox,30).sendKeys(RandomStringUtils.randomAlphabetic(10)+"@hotmail.com");
 		jsUtil.sendKeysUsingWithId("card_number",elementUtil.getRandomCreditCardNumbers());
 		jsUtil.sendKeysUsingWithId("cc-exp","03/22");		
 		elementUtil.doEnterText(cvvNumber, RandomStringUtils.randomNumeric(3));
-		elementUtil.waitForElementsVisible(zipNumberTxtBx,30).sendKeys(RandomStringUtils.randomNumeric(6));
-		elementUtil.waitForElementsVisible(submitCCBtn,30).click();
+		elementUtil.waitForElementVisible(zipNumberTxtBx,30).sendKeys(RandomStringUtils.randomNumeric(6));
+		elementUtil.waitForElementVisible(submitCCBtn,30).click();
 		elementUtil.moveToDefaultFromFrame();
+		
 		return new confirmationpage(driver);
 
 	}

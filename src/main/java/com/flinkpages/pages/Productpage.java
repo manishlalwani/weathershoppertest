@@ -32,8 +32,7 @@ public class Productpage{
 		
 	private String getProductNameWithLeastPrice(String proudctType) {
 		
-		Map.Entry<String,Integer> leastPrizedItem = elementUtil
-				.leastPrizedProductName(proudctType,allProductsXpathName,allProductsXpathValues);
+		Map.Entry<String,Integer> leastPrizedItem = elementUtil.leastPrizedProductName(proudctType,allProductsXpathName,allProductsXpathValues);
 		return String.format(productBtn, leastPrizedItem.getKey());
 	}
 	

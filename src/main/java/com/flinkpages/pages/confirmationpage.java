@@ -11,7 +11,8 @@ public class confirmationpage {
 
 	private ElementUtil elementUtil;
 
-	private By successMessage = By.cssSelector("div.justify-content-center>h2");
+	private By successMessage = By.cssSelector("p.text-justify");
+	private By successMessage1 = By.xpath("//h2[contains(text(),'SUCCESS')]");
 
 
 	public confirmationpage(WebDriver driver) {
@@ -21,15 +22,18 @@ public class confirmationpage {
 	}
 
 	public String getConfirmationPageTitle() {
+		elementUtil.getCurrentURL("confirmation");
 		return driver.getTitle();
 	}
 
 
 	public String getSuccessMessage() {
 
-		elementUtil.getCurrentURL("confirmation");
+		
 
-		return elementUtil.waitForElementPresenceWithWebDriverWait(successMessage,40,2).getText();
+		 elementUtil.waitForElementPresenceWithWebDriverWait(successMessage,40,2);
+		 return elementUtil.getElement(successMessage1).getText();
+		
 	}
 
 }

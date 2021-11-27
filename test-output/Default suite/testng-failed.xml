@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.makemytrip.testcases.homepagetestcases">
+      <class name="com.flinktests.testcases.homepagetestcases">
         <methods>
+          <include name="endToEndProductSelectionTest"/>
           <include name="endTestCase"/>
-          <include name="verifyTripSelection"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.makemytrip.testcases.homepagetestcases -->
+      </class> <!-- com.flinktests.testcases.homepagetestcases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
