@@ -73,8 +73,7 @@ public class Driverfactory {
 	 */
 	public Properties readPropertiesFile() {
 		BufferedReader reader;
-		System.out.println(System.getProperty("user.dir"));
-		System.out.println(System.getProperty("os.name"));
+		
 		if(System.getProperty("os.name").contains("Mac")) {
 		try {
 			reader = new BufferedReader(
