@@ -18,5 +18,5 @@ Steps
   or
  From IDEs you can import the project as Maven Project and then use maven clean and maven test commands
  or
- You can directly run testng.xml file as TestNG Suitr from runner package to run test cases.
+ You can directly run testng.xml file as TestNG Suite from runner package to run test cases.
  
