@@ -73,6 +73,9 @@ public class Driverfactory {
 	 */
 	public Properties readPropertiesFile() {
 		BufferedReader reader;
+		System.out.println(System.getProperty("user.dir"));
+		System.out.println(System.getProperty("os.name"));
+		if(System.getProperty("os.name").contains("Mac")) {
 		try {
 			reader = new BufferedReader(
 					new FileReader("./src/test/java/com/flinkTestcases/runner/application.properties"));
@@ -85,6 +88,22 @@ public class Driverfactory {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 			throw new RuntimeException("Config properties file is not found");
+		}
+		}
+		else {
+			try {
+				reader = new BufferedReader(
+						new FileReader(System.getProperty("user.dir")+"//src////test//java//com//flinkTestcases//runner//application.properties"));
+				prop = new Properties();
+				try {
+					prop.load(reader);
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+				throw new RuntimeException("Config properties file is not found");
+			}
 		}
 
 		return prop;

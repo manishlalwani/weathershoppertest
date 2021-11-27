@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Weather_Shopper_Test_Suite" class="navigator-link">
-              <span class="suite-name border-failed">Weather Shopper Test Suite</span>
+              <span class="suite-name border-passed">Weather Shopper Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Weather_Shopper_Test_Suite" class="hide-methods failed suite-Weather_Shopper_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-Weather_Shopper_Test_Suite -->
-                      <a href="#" panel-name="suite-Weather_Shopper_Test_Suite" class="show-methods failed suite-Weather_Shopper_Test_Suite"> (show)</a> <!-- show-methods failed suite-Weather_Shopper_Test_Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Weather_Shopper_Test_Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Weather_Shopper_Test_Suite" title="com.flinktests.testcases.homepagetestcases" class="method navigator-link" hash-for-method="endToEndProductSelectionTest">endToEndProductSelectionTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Weather_Shopper_Test_Suite -->
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -114,6 +100,11 @@
                       <a href="#" panel-name="suite-Weather_Shopper_Test_Suite" class="show-methods passed suite-Weather_Shopper_Test_Suite"> (show)</a> <!-- show-methods passed suite-Weather_Shopper_Test_Suite -->
                     </span>
                     <div class="method-list-content passed suite-Weather_Shopper_Test_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Weather_Shopper_Test_Suite" title="com.flinktests.testcases.homepagetestcases" class="method navigator-link" hash-for-method="endToEndProductSelectionTest">endToEndProductSelectionTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Weather_Shopper_Test_Suite" title="com.flinktests.testcases.homepagetestcases" class="method navigator-link" hash-for-method="endToEndProductSelectionTest">endToEndProductSelectionTest</a> <!-- method navigator-link -->
@@ -131,9 +122,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Weather_Shopper_Test_Suite" class="panel Weather_Shopper_Test_Suite">
-          <div class="suite-Weather_Shopper_Test_Suite-class-failed">
+          <div class="suite-Weather_Shopper_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">com.flinktests.testcases.homepagetestcases</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -142,41 +133,8 @@
                   <a name="endToEndProductSelectionTest">
                   </a> <!-- endToEndProductSelectionTest -->
                   <span class="method-name">endToEndProductSelectionTest</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebElement.getText()&quot; because the return value of &quot;com.flinkpages.utilities.ElementUtil.getElement(org.openqa.selenium.By)&quot; is null
-	at com.flinkpages.pages.confirmationpage.getSuccessMessage(confirmationpage.java:35)
-	at com.flinktests.testcases.homepagetestcases.endToEndProductSelectionTest(homepagetestcases.java:48)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:831)
-
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Weather_Shopper_Test_Suite-class-failed -->
-          <div class="suite-Weather_Shopper_Test_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.flinktests.testcases.homepagetestcases</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="endToEndProductSelectionTest">
@@ -252,11 +210,11 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'endToEndProductSelectionTest')
 data.setCell(0, 2, 'com.flinktests.testcases.homepagetestcases')
-data.setCell(0, 3, 18042);
+data.setCell(0, 3, 18667);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'endToEndProductSelectionTest')
 data.setCell(1, 2, 'com.flinktests.testcases.homepagetestcases')
-data.setCell(1, 3, 17492);
+data.setCell(1, 3, 17327);
 window.suiteTableData['Weather_Shopper_Test_Suite']= { tableData: data, tableDiv: 'times-div-Weather_Shopper_Test_Suite'}
 return data;
 }
@@ -289,30 +247,28 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.flinktests.testcases.homepagetestcases</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
                 <span class="method-name">setUp(firefox)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">endToEndProductSelectionTest</span>
-                <span class="method-start">11355 ms</span>
+                <span class="method-start">12230 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">endToEndProductSelectionTest</span>
-                <span class="method-start">13580 ms</span>
+                <span class="method-start">15285 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">endTestCase</span>
-                <span class="method-start">28890 ms</span>
+                <span class="method-start">29600 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">endTestCase</span>
-                <span class="method-start">31658 ms</span>
+                <span class="method-start">33968 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

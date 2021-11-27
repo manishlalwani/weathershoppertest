@@ -13,4 +13,16 @@
       </class> <!-- com.flinktests.testcases.homepagetestcases -->
     </classes>
   </test> <!-- End to End Test to Select Products Based on Current Temperature - Firefox(failed) -->
+  <test thread-count="4" parallel="tests" name="End to End Test to Select Products Based on Current Temperature - Chrome(failed)" verbose="3">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.flinktests.testcases.homepagetestcases">
+        <methods>
+          <include name="endToEndProductSelectionTest"/>
+          <include name="endTestCase"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.flinktests.testcases.homepagetestcases -->
+    </classes>
+  </test> <!-- End to End Test to Select Products Based on Current Temperature - Chrome(failed) -->
 </suite> <!-- Failed suite [Weather Shopper Test Suite] -->

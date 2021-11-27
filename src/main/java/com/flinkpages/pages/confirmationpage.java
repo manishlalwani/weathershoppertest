@@ -11,28 +11,38 @@ public class confirmationpage {
 
 	private ElementUtil elementUtil;
 
-	private By successMessage = By.cssSelector("p.text-justify");
-	private By successMessage1 = By.xpath("//h2[contains(text(),'SUCCESS')]");
+	/*
+	 * By locatots for Confirmation page
+	 */
+	private By successMessagewithDetails = By.cssSelector("p.text-justify");
+	private By successMessageHeader = By.xpath("//h2[contains(text(),'SUCCESS')]");
 
 
+	/*
+	 * confirmation page constructor
+	 */
 	public confirmationpage(WebDriver driver) {
 		this.driver = driver;
 		elementUtil = new ElementUtil(this.driver);
 
 	}
 
+	/*
+	 * get title of confirmation page
+	 */
 	public String getConfirmationPageTitle() {
 		elementUtil.getCurrentURL("confirmation");
 		return driver.getTitle();
 	}
 
 
-	public String getSuccessMessage() {
+	/*
+	 * get the success/failure message after transaction
+	 */
+	public String getTransactionMessage() {
 
-		
-
-		 elementUtil.waitForElementPresenceWithWebDriverWait(successMessage,40,2);
-		 return elementUtil.getElement(successMessage1).getText();
+		 elementUtil.waitForElementPresenceWithWebDriverWait(successMessagewithDetails,40,2);
+		 return elementUtil.getElement(successMessageHeader).getText();
 		
 	}
 

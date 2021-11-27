@@ -45,7 +45,7 @@ public void endToEndProductSelectionTest() {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
-	Assert.assertEquals(cm.getSuccessMessage(), "PAYMENT SUCCESS" );
+	Assert.assertEquals(cm.getTransactionMessage(), "PAYMENT SUCCESS" );
 	//System.out.println(cm.getSuccessMessage());
 }
 

@@ -7,10 +7,15 @@ import org.apache.commons.lang.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
 import com.flinkpages.utilities.ElementUtil;
 import com.flinkpages.utilities.JavaScriptUtil;
 
+
+/*
+ * 
+ * author manishlalwani
+ * 
+ */
 
 public class checkoutpage{
 
@@ -18,6 +23,7 @@ public class checkoutpage{
 	private ElementUtil elementUtil;
 	private JavaScriptUtil jsUtil;
 
+	//By locators
 	private By productNamesSelected = By.xpath("//tbody//td");
 	private By payForBtn = By.xpath("//button/span[contains(text(),'Pay')]");
 	private By emailTextBox = By.xpath("//input[@id='email']");
@@ -28,17 +34,21 @@ public class checkoutpage{
 
 
 
+	//page constructor
 	public checkoutpage(WebDriver driver) {
 		this.driver = driver;
 		elementUtil = new ElementUtil(this.driver);
-		jsUtil = new JavaScriptUtil(driver);
+		jsUtil = new JavaScriptUtil(this.driver);
 	}
 
+	//get page title
 	public String getCheckoutPageTitle() {
 		return driver.getTitle();
 	}
 
 
+	//get product values which were selected
+	
 	private ArrayList<Integer> getProductValues() {
 
 		String productNamexpath = "//tbody//td";
@@ -55,6 +65,8 @@ public class checkoutpage{
 
 	}
 
+	//get total values calculated by app
+	
 	private int getTotalValues() {
 		String finalValueText = elementUtil.getElement(By.id("total")).getText();
 		String[] values = finalValueText.split(" ");
@@ -63,6 +75,7 @@ public class checkoutpage{
 
 	}
 
+	//verify total values with summation of products displayed
 	public boolean verifyProductTotal() {
 
 		int sum = getProductValues().stream().mapToInt(x->x).sum();
@@ -78,6 +91,7 @@ public class checkoutpage{
 		elementUtil.waitForElementVisible(payForBtn,30).click();
 		elementUtil.moveToFrame(frameForPaymentPopup);
 		elementUtil.waitForElementVisible(By.xpath("//h1"),30);
+		
 		elementUtil.waitForElementVisible(emailTextBox,30).sendKeys(RandomStringUtils.randomAlphabetic(10)+"@hotmail.com");
 		jsUtil.sendKeysUsingWithId("card_number",elementUtil.getRandomCreditCardNumbers());
 		jsUtil.sendKeysUsingWithId("cc-exp","03/22");		

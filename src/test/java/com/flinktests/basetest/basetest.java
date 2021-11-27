@@ -18,9 +18,10 @@ import com.flinkpages.utilities.Driverfactory;
 
 
 
+
 public class basetest {
 
-	com.flinkpages.utilities.Driverfactory df;
+	public Driverfactory df;
 
 	public WebDriver driver;
 	public homepage hp;
