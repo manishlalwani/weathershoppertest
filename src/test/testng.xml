@@ -3,7 +3,6 @@
 <suite parallel="classes" name="WeatherShopper Demo QA">
   <test thread-count="5" parallel="classes" name="Test">
     <classes>
-      <class name="com.flinkTestCases.basetest.basetest"/>
       <class name="com.flinkTestCases.testcases.homepagetestcases"/>
     </classes>
   </test> <!-- Test -->
