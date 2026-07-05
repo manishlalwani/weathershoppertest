@@ -1,0 +1,108 @@
+2026-07-05 18:20:29 [TestNG-tests-1] INFO  c.weathershopper.tests.base.BaseTest - Setting up test with browser: chrome
+2026-07-05 18:20:29 [TestNG-tests-1] INFO  c.w.utilities.DriverFactory - Properties file loaded successfully
+2026-07-05 18:20:29 [TestNG-tests-1] INFO  c.weathershopper.tests.base.BaseTest - Browser overridden to: chrome
+2026-07-05 18:20:29 [TestNG-tests-1] INFO  c.w.utilities.DriverFactory - Setting up WebDriver for browser: chrome
+2026-07-05 18:20:29 [TestNG-tests-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 149.0.7827.155 (resolved driver for Chrome 149)
+2026-07-05 18:20:30 [TestNG-tests-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/temp/.cache/selenium/chromedriver/mac-x64/149.0.7827.155/chromedriver
+2026-07-05 18:20:34 [TestNG-tests-1] INFO  c.w.utilities.DriverFactory - Navigating to URL: https://weathershopper.pythonanywhere.com/
+2026-07-05 18:20:36 [TestNG-tests-1] INFO  com.weathershopper.pages.HomePage - HomePage initialized
+2026-07-05 18:20:36 [TestNG-tests-1] INFO  c.weathershopper.tests.base.BaseTest - Test setup completed
+2026-07-05 18:20:36 [TestNG-tests-1] INFO  c.w.t.testcases.HomePageTestCases - Starting end-to-end product selection test
+2026-07-05 18:20:36 [TestNG-tests-1] INFO  com.weathershopper.pages.HomePage - Current temperature retrieved: 10 degrees
+2026-07-05 18:20:36 [TestNG-tests-1] INFO  c.w.t.testcases.HomePageTestCases - Current temperature: 10 degrees
+2026-07-05 18:20:36 [TestNG-tests-1] INFO  c.w.t.testcases.HomePageTestCases - Temperature is below 18 - selecting moisturizers
+2026-07-05 18:20:38 [TestNG-tests-1] INFO  com.weathershopper.pages.HomePage - Moisturizers button clicked
+2026-07-05 18:20:38 [TestNG-tests-1] INFO  c.weathershopper.pages.ProductPage - ProductPage initialized
+2026-07-05 18:20:38 [TestNG-tests-1] INFO  c.weathershopper.pages.ProductPage - Least priced aloe product: Vassily Aloe Attack - ₹199
+2026-07-05 18:20:38 [TestNG-tests-1] DEBUG c.w.utilities.ElementUtil - Clicked on element: By.xpath: //p[contains(text(),'Vassily Aloe Attack')]//following-sibling::button
+2026-07-05 18:20:38 [TestNG-tests-1] INFO  c.weathershopper.pages.ProductPage - Selected product: aloe
+2026-07-05 18:20:39 [TestNG-tests-1] INFO  c.weathershopper.pages.ProductPage - Least priced almond product: Max honey and almond moisturiser - ₹195
+2026-07-05 18:20:39 [TestNG-tests-1] DEBUG c.w.utilities.ElementUtil - Clicked on element: By.xpath: //p[contains(text(),'Max honey and almond moisturiser')]//following-sibling::button
+2026-07-05 18:20:39 [TestNG-tests-1] INFO  c.weathershopper.pages.ProductPage - Selected product: almond
+2026-07-05 18:20:39 [TestNG-tests-1] DEBUG c.w.utilities.ElementUtil - Clicked on element: By.id: cart
+2026-07-05 18:20:39 [TestNG-tests-1] INFO  c.weathershopper.pages.ProductPage - Cart button clicked
+2026-07-05 18:20:39 [TestNG-tests-1] INFO  c.weathershopper.pages.CheckoutPage - CheckoutPage initialized
+2026-07-05 18:20:41 [TestNG-tests-1] DEBUG c.weathershopper.pages.CheckoutPage - Product values retrieved: [199, 195]
+2026-07-05 18:20:41 [TestNG-tests-1] DEBUG c.weathershopper.pages.CheckoutPage - Total amount retrieved: ₹394
+2026-07-05 18:20:41 [TestNG-tests-1] INFO  c.weathershopper.pages.CheckoutPage - Product total verification passed: Sum=394, Total=394
+2026-07-05 18:20:41 [TestNG-tests-1] INFO  c.w.t.testcases.HomePageTestCases - Product total verification passed
+2026-07-05 18:20:41 [TestNG-tests-1] INFO  c.weathershopper.pages.CheckoutPage - Starting payment process
+2026-07-05 18:20:42 [TestNG-tests-1] INFO  c.weathershopper.pages.CheckoutPage - Pay button clicked
+2026-07-05 18:20:42 [TestNG-tests-1] DEBUG c.w.utilities.ElementUtil - Switched to frame: By.xpath: //iframe[contains(@src,'stripe')]
+2026-07-05 18:20:42 [TestNG-tests-1] INFO  c.weathershopper.pages.CheckoutPage - Switched to Stripe iframe
+2026-07-05 18:20:43 [TestNG-tests-1] DEBUG c.w.utilities.ElementUtil - Entered text in element: By.xpath: //input[@id='email']
+2026-07-05 18:20:43 [TestNG-tests-1] INFO  c.weathershopper.pages.CheckoutPage - Email entered: mLXgRjJQMB@hotmail.com
+2026-07-05 18:20:43 [TestNG-tests-1] DEBUG c.w.utilities.JavaScriptUtil - Sent keys to element with ID: card_number
+2026-07-05 18:20:43 [TestNG-tests-1] INFO  c.weathershopper.pages.CheckoutPage - Card number entered
+2026-07-05 18:20:43 [TestNG-tests-1] DEBUG c.w.utilities.JavaScriptUtil - Sent keys to element with ID: cc-exp
+2026-07-05 18:20:43 [TestNG-tests-1] INFO  c.weathershopper.pages.CheckoutPage - Card expiry date entered: 03/26
+2026-07-05 18:20:44 [TestNG-tests-1] DEBUG c.w.utilities.ElementUtil - Entered text in element: By.id: cc-csc
+2026-07-05 18:20:44 [TestNG-tests-1] INFO  c.weathershopper.pages.CheckoutPage - CVV entered
+2026-07-05 18:20:44 [TestNG-tests-1] INFO  c.weathershopper.pages.CheckoutPage - Zip code entered
+2026-07-05 18:20:44 [TestNG-tests-1] INFO  c.weathershopper.pages.CheckoutPage - Submit button clicked
+2026-07-05 18:20:44 [TestNG-tests-1] DEBUG c.w.utilities.ElementUtil - Switched back to default content
+2026-07-05 18:20:44 [TestNG-tests-1] INFO  c.weathershopper.pages.CheckoutPage - Switched back to default content
+2026-07-05 18:20:46 [TestNG-tests-1] INFO  c.w.pages.ConfirmationPage - ConfirmationPage initialized
+2026-07-05 18:20:46 [TestNG-tests-1] INFO  c.w.t.testcases.HomePageTestCases - Payment process completed
+2026-07-05 18:21:26 [TestNG-tests-1] ERROR c.w.pages.ConfirmationPage - Error retrieving transaction message
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.cssSelector: p.text-justify (tried for 40 second(s) with 2 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at com.weathershopper.utilities.ElementUtil.waitForElementPresenceWithWebDriverWait(ElementUtil.java:126)
+	at com.weathershopper.pages.ConfirmationPage.getTransactionMessage(ConfirmationPage.java:52)
+	at com.weathershopper.tests.testcases.HomePageTestCases.endToEndProductSelectionTest(HomePageTestCases.java:61)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"p.text-justify"}
+  (Session info: chrome=149.0.7827.201)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.8.3', java.version: '25.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [79d0af256bcb496917887b21a0115dd8, findElement {using=css selector, value=p.text-justify}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.201, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: /var/folders/9l/p14b02rn0g7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61167}, goog:processID: 14827, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:61167/devtoo..., se:cdpVersion: 149.0.7827.201, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 79d0af256bcb496917887b21a0115dd8
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	... 23 common frames omitted
+2026-07-05 18:21:26 [TestNG-tests-1] INFO  c.weathershopper.tests.base.BaseTest - Tearing down test
+2026-07-05 18:21:27 [TestNG-tests-1] INFO  c.weathershopper.tests.base.BaseTest - Driver closed
+2026-07-05 18:21:27 [TestNG-tests-1] INFO  c.weathershopper.tests.base.BaseTest - Setting up test with browser: firefox
+2026-07-05 18:21:27 [TestNG-tests-1] INFO  c.w.utilities.DriverFactory - Properties file loaded successfully
+2026-07-05 18:21:27 [TestNG-tests-1] INFO  c.weathershopper.tests.base.BaseTest - Browser overridden to: firefox
+2026-07-05 18:21:27 [TestNG-tests-1] INFO  c.w.utilities.DriverFactory - Setting up WebDriver for browser: firefox
+2026-07-05 18:21:28 [TestNG-tests-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Reading https://raw.githubusercontent.com/bonigarcia/webdrivermanager/master/docs/mirror/geckodriver to seek geckodriver
+2026-07-05 18:21:28 [TestNG-tests-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as /Users/temp/.cache/selenium/geckodriver/mac64/0.37.0/geckodriver
