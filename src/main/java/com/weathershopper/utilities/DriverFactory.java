@@ -60,11 +60,10 @@ public class DriverFactory {
         }
 
         driver = getDriver();
-        driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(PAGE_LOAD_TIMEOUT));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICIT_WAIT));
 
-        String applicationUrl = properties.getProperty("applicationUrl");
+        String applicationUrl = properties.getProperty("application.url","https://weathershopper.pythonanywhere.com/");
         logger.info("Navigating to URL: {}", applicationUrl);
         driver.get(applicationUrl);
 

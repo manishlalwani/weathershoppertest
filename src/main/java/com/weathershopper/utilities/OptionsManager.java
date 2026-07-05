@@ -53,6 +53,7 @@ public class OptionsManager {
 
         chromeOptions.addArguments("--disable-extensions");
         chromeOptions.addArguments("--disable-plugins");
+        chromeOptions.addArguments("--start-maximized");
 
         return chromeOptions;
     }
