@@ -31,7 +31,6 @@ public class DriverFactory {
     private static final long IMPLICIT_WAIT = 10;
 
     private WebDriver driver;
-    private Properties properties;
     private String browser;
     private OptionsManager optionsManager;
     public static ThreadLocal<WebDriver> threadLocalDriver = new ThreadLocal<>();
@@ -43,7 +42,6 @@ public class DriverFactory {
      * @return WebDriver instance
      */
     public WebDriver setUpDriver(Properties properties) {
-        this.properties = properties;
         browser = properties.getProperty("browser", "chrome").toLowerCase();
         optionsManager = new OptionsManager(properties);
 

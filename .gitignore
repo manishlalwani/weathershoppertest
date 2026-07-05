@@ -1,6 +1,6 @@
 /target/
 /src/
-/allure-results
+/allure-results/
 /test-output/
 /.settings
 /.project
@@ -10,4 +10,3 @@
 settings.json
 /.vscode/
 /.settings/
-

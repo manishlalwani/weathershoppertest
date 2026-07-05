@@ -13,11 +13,9 @@ import org.slf4j.LoggerFactory;
 public class JavaScriptUtil {
 
     private static final Logger logger = LoggerFactory.getLogger(JavaScriptUtil.class);
-    private final WebDriver driver;
     private final JavascriptExecutor jsExecutor;
 
     public JavaScriptUtil(WebDriver driver) {
-        this.driver = driver;
         this.jsExecutor = (JavascriptExecutor) driver;
     }
 
