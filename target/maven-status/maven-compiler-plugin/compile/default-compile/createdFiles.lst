@@ -1,0 +1,8 @@
+com/weathershopper/pages/ProductPage.class
+com/weathershopper/utilities/OptionsManager.class
+com/weathershopper/pages/HomePage.class
+com/weathershopper/utilities/JavaScriptUtil.class
+com/weathershopper/utilities/DriverFactory.class
+com/weathershopper/utilities/ElementUtil.class
+com/weathershopper/pages/CheckoutPage.class
+com/weathershopper/pages/ConfirmationPage.class

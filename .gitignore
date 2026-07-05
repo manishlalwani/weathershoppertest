@@ -1,13 +1,21 @@
-/target/
+# Source (only if you really want to ignore it)
 /src/
-./allure-results/
-./test-output/
-./.settings
-./.project
-/MODERNIZATION_SUMMARY.md
-./bin/
-./logs/
+
+# Reports
+/allure-results/
+/test-output/
+
+# Eclipse
+.settings/
+.project
+
+# VS Code
+.vscode/
 .settings.json
-/.vscode/
-/.settings/
-/.settings/
+
+# Build folders
+/bin/
+/logs/
+
+# Documentation
+MODERNIZATION_SUMMARY.md
