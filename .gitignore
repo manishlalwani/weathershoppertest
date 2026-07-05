@@ -3,6 +3,7 @@
 # Reports
 /allure-results/
 /test-output/
+/target/
 
 # Eclipse
 .settings/
