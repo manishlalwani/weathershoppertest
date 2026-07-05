@@ -1,1 +1,13 @@
 /target/
+/src/
+/allure-results
+/test-output/
+/.settings
+/.project
+/MODERNIZATION_SUMMARY.md
+/bin/
+/logs/
+settings.json
+/.vscode/
+/.settings/
+

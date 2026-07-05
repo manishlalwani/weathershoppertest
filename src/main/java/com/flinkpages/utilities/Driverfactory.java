@@ -9,12 +9,14 @@ import java.time.Duration;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.log4j.Logger;
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -30,33 +32,31 @@ public class Driverfactory {
 	private String browser;
 	private OptionsManager op;
 	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();
-	public static final Logger LOG = Logger.getLogger(Driverfactory.class);
+	public static final Logger LOG = LoggerFactory.getLogger(Driverfactory.class);
 
-	
 	/*
-	 * This method is used to set up the webdriver on the basis of given brownser name..
+	 * This method is used to set up the webdriver on the basis of given brownser
+	 * name..
 	 * 
 	 * @param browser
+	 * 
 	 * @return will return the driver
 	 * 
 	 */
-	
+
 	public WebDriver setUpDriver(Properties prop) {
 
 		browser = prop.getProperty("browser");
 		op = new OptionsManager(prop);
 
-	
 		if (browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
-		    tlDriver.set(new ChromeDriver(op.getChromeOptions()));
-		}
-		else if (browser.equalsIgnoreCase("ff") || browser.equalsIgnoreCase("firefox")) {
+			tlDriver.set(new ChromeDriver(op.getChromeOptions()));
+		} else if (browser.equalsIgnoreCase("ff") || browser.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			tlDriver.set(new FirefoxDriver(op.getFirefoxOptions()));
 		}
 
-		
 		getDriver().manage().window().maximize();
 		getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 		// Launch URL
@@ -73,26 +73,26 @@ public class Driverfactory {
 	 */
 	public Properties readPropertiesFile() {
 		BufferedReader reader;
-		
-		if(System.getProperty("os.name").contains("Mac")) {
-		try {
-			reader = new BufferedReader(
-					new FileReader("./src/test/java/com/flinkTestcases/runner/application.properties"));
-			prop = new Properties();
-			try {
-				prop.load(reader);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-			throw new RuntimeException("Config properties file is not found");
-		}
-		}
-		else {
+
+		if (System.getProperty("os.name").contains("Mac")) {
 			try {
 				reader = new BufferedReader(
-						new FileReader(System.getProperty("user.dir")+"//src////test//java//com//flinkTestcases//runner//application.properties"));
+						new FileReader("./src/test/java/com/flinkTestcases/runner/application.properties"));
+				prop = new Properties();
+				try {
+					prop.load(reader);
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+				throw new RuntimeException("Config properties file is not found");
+			}
+		} else {
+			try {
+				reader = new BufferedReader(
+						new FileReader(System.getProperty("user.dir")
+								+ "//src////test//java//com//flinkTestcases//runner//application.properties"));
 				prop = new Properties();
 				try {
 					prop.load(reader);
@@ -112,23 +112,22 @@ public class Driverfactory {
 
 		driver.quit();
 	}
-	
+
 	public synchronized WebDriver getDriver() {
 		return tlDriver.get();
-		
+
 	}
-	
-	
+
 	/*
 	 * takes screenshot
 	 */
 	public String getScreenShot() {
 		File srcFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
-		String path = System.getProperty("user.dir")+"/screenshot/"+System.currentTimeMillis()+".png";
+		String path = System.getProperty("user.dir") + "/screenshot/" + System.currentTimeMillis() + ".png";
 		File destination = new File(path);
 		try {
 			FileUtils.copyFile(srcFile, destination);
-		}catch(Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return path;

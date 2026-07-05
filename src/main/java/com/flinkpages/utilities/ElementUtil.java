@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -80,7 +81,7 @@ public class ElementUtil {
 				"6011111111111117", "36227206271667", "3566002020360505", "6200000000000005", "4000056655665556",
 				"4242424242424242" };
 
-		return cc[Integer.parseInt(org.apache.commons.lang.RandomStringUtils.randomNumeric(1))];
+		return cc[Integer.parseInt(RandomStringUtils.randomNumeric(1))];
 
 	}
 
