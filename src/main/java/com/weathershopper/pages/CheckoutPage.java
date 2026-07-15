@@ -103,6 +103,7 @@ public class CheckoutPage {
      * @return true if totals match, false otherwise
      */
     public boolean verifyProductTotal() {
+        @SuppressWarnings("null")
         int sum = getProductValues().stream().mapToInt(Integer::intValue).sum();
         int total = getTotalAmount();
         boolean isValid = sum == total;
