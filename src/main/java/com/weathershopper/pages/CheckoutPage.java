@@ -1,16 +1,17 @@
 package com.weathershopper.pages;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import com.weathershopper.utilities.ElementUtil;
 import com.weathershopper.utilities.JavaScriptUtil;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Checkout Page Object containing locators and methods for checkout page interactions
@@ -35,7 +36,7 @@ public class CheckoutPage {
     private static final By TOTAL_AMOUNT = By.id("total");
 
     // Card details
-    private static final String CARD_EXPIRY = "03/26";
+    private static final String CARD_EXPIRY = "09/26";
 
     /**
      * CheckoutPage constructor
@@ -121,6 +122,7 @@ public class CheckoutPage {
      * @return ConfirmationPage instance
      * @throws InterruptedException if thread is interrupted
      */
+    @SuppressWarnings("UseSpecificCatch")
     public ConfirmationPage makePayment() throws InterruptedException {
         try {
             logger.info("Starting payment process");

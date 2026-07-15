@@ -1,6 +1,11 @@
 package com.weathershopper.utilities;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.time.Duration;
+import java.util.Properties;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -9,12 +14,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.time.Duration;
-import java.util.Properties;
 
 /**
  * DriverFactory class to initialize and manage WebDriver instances
@@ -48,14 +47,14 @@ public class DriverFactory {
         logger.info("Setting up WebDriver for browser: {}", browser);
 
         if ("chrome".equalsIgnoreCase(browser)) {
-            WebDriverManager.chromedriver().setup();
+            ///WebDriverManager.chromedriver().setup();
             threadLocalDriver.set(new ChromeDriver(optionsManager.getChromeOptions()));
         } else if ("firefox".equalsIgnoreCase(browser) || "ff".equalsIgnoreCase(browser)) {
-            WebDriverManager.firefoxdriver().setup();
+            //WebDriverManager.firefoxdriver().setup();
             threadLocalDriver.set(new FirefoxDriver(optionsManager.getFirefoxOptions()));
         } else {
             logger.warn("Unknown browser: {}. Defaulting to Chrome", browser);
-            WebDriverManager.chromedriver().setup();
+            //WebDriverManager.chromedriver().setup();
             threadLocalDriver.set(new ChromeDriver(optionsManager.getChromeOptions()));
         }
 
